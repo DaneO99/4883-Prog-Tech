@@ -1,38 +1,7 @@
-.
-└── 5143-Opsys-xxx               (main repo folder)
-    ├── Assignments                 (assignments folder)
-    │   ├── A01                     (single assignment folder)
-    │   │   ├── README.md           (assignment readme)
-    │   │   ├── code_file_1.cpp     (assignment files)
-    │   │   ├── code_file_2.cpp
-    │   │   └── code_file_x.hpp
-    │   ├── A02
-    │   │   ├── README.md
-    │   │   ├── code_file_1.cpp
-    │   │   ├── code_file_2.h
-    │   │   └── code_file_x.cpp
-    │   ├── AXX
-    │   │   ├── README.md
-    │   │   ├── code_file_1.cpp
-    │   │   ├── code_file_2.hpp
-    │   │   └── code_file_x.cpp
-    │   ├── P01
-    │   │   ├── README.md
-    │   │   ├── code_file_1.cpp
-    │   │   ├── code_file_2.cpp
-    │   │   └── code_file_x.cpp
-    │   ├── P02
-    │   │   ├── README.md
-    │   │   ├── code_file_1.cpp
-    │   │   ├── code_file_2.cpp
-    │   │   └── code_file_x.cpp
-    │   ├── PXX
-    │   │   ├── README.md
-    │   │   ├── code_file_1.cpp
-    │   │   ├── code_file_2.cpp
-    │   │   └── code_file_x.cpp
-    |   └── README.md               (this is the assignments folder readme)
-    └── README.md                   (this is your main repo readme)
-
-
-
+## Assignments
+|  #  | Folder Link                            | Assignment Description                               |
+| :-: | -------------------------------------- | ---------------------------------------------------- |
+|  1  | [A01](./FakeAssignments/A01/README.md) | [Show up to class ](./FakeAssignments/A01/README.md) |
+|  2  | [A02](./FakeAssignments/A02/README.md) | [Listen in class ](./FakeAssignments/A02/README.md)  |
+|  3  | [P01](./FakeAssignments/P01/README.md) | [Hello World ](./FakeAssignments/P01/README.md)      |
+|  1  | [P02](./FakeAssignments/P02/README.md) | [Hello Mars ](./FakeAssignments/P02/README.md)       |
