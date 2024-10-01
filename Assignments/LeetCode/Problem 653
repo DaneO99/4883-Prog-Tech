@@ -1,16 +1,31 @@
 //Solution
 class Solution {
 public:
-    TreeNode* searchBST(TreeNode* root, int val) {
-        while(root){
-            if(root->val == val){
-                return root;
-            }else if(root->val <= val){
-                root = root ->right;
+    void inorder(TreeNode* root, vector<int>&keys){
+        if(root == NULL) return;
+        inorder(root->left, keys);
+        keys.push_back(root->val);
+        inorder(root->right,keys);
+    }
+    bool findTarget(TreeNode* root, int k) {
+        vector<int>keys;
+        inorder(root, keys);
+        
+        int left = 0;
+        int right = keys.size()- 1;
+
+        while(left < right)
+        {
+            int sum = keys[left] + keys[right];
+
+            if(sum == k){
+                return true;
+            }else if(sum < k){
+                left++;
             }else{
-                root = root->left;
+                right--;
             }
         }
-        return root;
+        return false;
     }
 };
