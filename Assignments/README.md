@@ -5,5 +5,5 @@
 |  2  | [LeetCode 653](./LeetCode/Problem653) | [LeetCode 653](./LeetCode/Problem653)  |
 |  3  | [LeetCode 700](./LeetCode/Problem700) | [LeetCode 700](./LeetCode/Problem700)      |
 |  4  | [LeetCode 26](./LeetCode/Problem26) | [LeetCode 26](./LeetCode/Problem26)      |
-|  5  | [UVA 10055](./FakeAssignments/P02/README.md) | [UVA 10055](./FakeAssignments/P02/README.md)       |
-|  6  | [UVA 11988](./FakeAssignments/P02/README.md) | [UVA 11988](./FakeAssignments/P02/README.md)       |
+|  5  | [UVA 10055](./UVAJudge/10055) | [UVA 10055](./UVAJudge/10055)       |
+|  6  | [UVA 11988](./UVAJudge/11988) | [UVA 11988](./UVAJudge/11988)       |
