@@ -1,7 +1,8 @@
 ## Assignments
 |  #  | Folder Link                            | Assignment Description                               |
 | :-: | -------------------------------------- | ---------------------------------------------------- |
-|  1  | [A05](./Assignments/LeetCode) | [Easy Breezy](./Assignments/LeetCode) |
-|  2  | [A02](./FakeAssignments/A02/README.md) | [Listen in class ](./FakeAssignments/A02/README.md)  |
-|  3  | [A03](./FakeAssignments/P01/README.md) | [Hello World ](./FakeAssignments/P01/README.md)      |
-|  1  | [A04](./FakeAssignments/P02/README.md) | [Hello Mars ](./FakeAssignments/P02/README.md)       |
+|  1  | [LeetCode 451](./Assignments/LeetCode) | [LeetCode 451](./Assignments/LeetCode) |
+|  2  | [LeetCode 653](./FakeAssignments/A02/README.md) | [LeetCode 653](./FakeAssignments/A02/README.md)  |
+|  3  | [LeetCode 700](./FakeAssignments/P01/README.md) | [LeetCode 700]FakeAssignments/P01/README.md)      |
+|  4  | [UVA 10055](./FakeAssignments/P02/README.md) | [UVA 10055](./FakeAssignments/P02/README.md)       |
+|  5  | [UVA 11988](./FakeAssignments/P02/README.md) | [UVA 11988](./FakeAssignments/P02/README.md)       |
