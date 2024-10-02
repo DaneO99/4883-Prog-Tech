@@ -1,4 +1,4 @@
-##LeetCode Username: DaneO99
+### LeetCode Username: DaneO99
 ## Assignments
 |  #  | Folder Link                            | Assignment Description                               |
 | :-: | -------------------------------------- | ---------------------------------------------------- |
