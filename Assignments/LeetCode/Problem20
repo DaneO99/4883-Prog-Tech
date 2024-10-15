@@ -1,3 +1,5 @@
+//checks to see if there are valid parenthesis and/or brackets.
+
 class Solution {
 private:
     vector<char> stack; 
