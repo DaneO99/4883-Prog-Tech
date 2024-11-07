@@ -1,6 +1,6 @@
 ### LeetCode Username: DaneO99
 
-These are the easy Leet Code problems I have done.
+These are the easy Leet Code/UVA problems problems I have done.
 ## Assignments
 |  #  | Folder Link                            | Assignment Description                               |
 | :-: | -------------------------------------- | ---------------------------------------------------- |
