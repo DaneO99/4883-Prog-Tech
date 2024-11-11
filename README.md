@@ -4,4 +4,4 @@
 ## Assignments
 |  #  | Folder Link                            | Assignment Description                               |
 | :-: | -------------------------------------- | ---------------------------------------------------- |
-|  1  | [A05](Assignments/README.md) | [Easy Breezy](Assignments/README.md) |
+|  1  | [A05](Assignments/Easy) | [Easy Breezy](Assignments/Easy) |
