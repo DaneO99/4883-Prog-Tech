@@ -1,0 +1,32 @@
+LeetCode 335
+
+You are given an array of integers distance.
+
+You start at the point (0, 0) on an X-Y plane, and you move distance[0] meters to the north, then distance[1] meters to the west, distance[2] meters to the south, distance[3] meters to the east, and so on. In other words, after each move, your direction changes counter-clockwise.
+
+Return true if your path crosses itself or false if it does not.
+
+class Solution {
+public:
+    bool isSelfCrossing(vector<int>& d) {
+        int n = d.size();
+        
+        // Iterate through the distances and check for self-crossing conditions
+        for (int i = 3; i < n; ++i) {
+            // Case 1: Fourth move crosses the first move (current crosses two moves ago)
+            if (d[i] >= d[i - 2] && d[i - 1] <= d[i - 3]) {
+                return true;
+            }
+            // Case 2: Fifth move crosses the first move
+            if (i >= 4 && d[i - 1] == d[i - 3] && d[i] + d[i - 4] >= d[i - 2]) {
+                return true;
+            }
+            // Case 3: Sixth move crosses the first move
+            if (i >= 5 && d[i - 2] >= d[i - 4] && d[i] + d[i - 4] >= d[i - 2] && d[i - 1] <= d[i - 3] && d[i - 1] + d[i - 5] >= d[i - 3]) {
+                return true;
+            }
+        }
+        
+        return false;  // No crossing found
+    }
+};
