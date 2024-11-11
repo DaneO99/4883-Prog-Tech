@@ -1,0 +1,41 @@
+LeetCode 733
+You are given an image represented by an m x n grid of integers image, where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and color. Your task is to perform a flood fill on the image starting from the pixel image[sr][sc].
+
+To perform a flood fill:
+
+Begin with the starting pixel and change its color to color.
+Perform the same process for each pixel that is directly adjacent (pixels that share a side with the original pixel, either horizontally or vertically) and shares the same color as the starting pixel.
+Keep repeating this process by checking neighboring pixels of the updated pixels and modifying their color if it matches the original color of the starting pixel.
+The process stops when there are no more adjacent pixels of the original color to update.
+Return the modified image after performing the flood fill.
+
+class Solution {
+public:
+    void floodFillHelper(vector<vector<int>>& image, int sr, int sc, int newColor, int original_color){
+        // Check if the pixel is out of bounds
+        if(sr < 0 || sr >= image.size() || sc < 0 || sc >= image[0].size()) return;
+        
+        // Check if the pixel's color is not the original color
+        if (image[sr][sc] != original_color) return;
+        
+        // Change the color of the current pixel to the new color
+        image[sr][sc] = newColor;
+        
+        // Recursively call flood fill on all 4 neighbors
+        floodFillHelper(image, sr - 1, sc, newColor, original_color); // up
+        floodFillHelper(image, sr + 1, sc, newColor, original_color); // down
+        floodFillHelper(image, sr, sc - 1, newColor, original_color); // left
+        floodFillHelper(image, sr, sc + 1, newColor, original_color); // right
+    }
+
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+        int original_color = image[sr][sc];
+        
+        // Avoid infinite loop: if the new color is the same as the original, don't do anything
+        if(original_color != color){
+            floodFillHelper(image, sr, sc, color, original_color);
+        }
+        
+        return image;
+    }
+};
