@@ -1,2 +1,93 @@
-# LeetCode 3303
+## LeetCode 3303
+## Problem Overview
+Goal:
+Find the smallest index of a substring in “s” that is almost equal to pattern
+Two strings are almost equal if they differ by no more than one character
+Output:
+Return the smallest index if found, otherwise, return -1
+## Examples and Explanation
+Example
+Input S = “abcdefg”, pattern = “bcdffg”
+Output = 1
+The output equals 1 because it’s the smallest starting index of substring S that can be transformed to match the pattern(changing the E in S to an F makes the match)
+## Constraints
+1 < pattern.length < s.length <= 10^5
+Both S and pattern consists of only lowercase letters
+Edge Cases:
+Pattern is longer than S: Impossible to find a match in this case(can’t add characters only substitute.)
+Exact Match: No changes required.
+Single Character Difference: Cases where only one character differs between substring S and pattern, which qualifies as “almost equal”
+## Approach
+Sliding window: Using a window the size equal to pattern.length to check each substring in S
+Count Mismatches: For each substring, count mismatches between it and pattern. If mismatch count is zero or one, it’s almost equal
+Optimization: Update mismatches as the window slides
+## Complexity
+Time complexity: O(n) for sliding window approach, where n is length of S
+Space Complexity: O(1) since only a constant amount of extra space is needed
+## Code Overview
+1St: Check Lengths
+Check if the pattern is longer than the string S. If longer return -1 since no valid match is possible.
+2nd: Initialize mismatch count for first window
+The first window is the size of pattern, so it checks each character each character and counts mismatches
+3rd: First window check
+If the first substring has zero or one mismatch, the function will return zero
+4th: Sliding Window Check
+For each substring in S(shifting one character to the right each time)
+Adjust mismatch count by “removing” the effect of the outgoing character (the character leaving the window) and “adding” the effect of the incoming character (the new character that’s sliding into the window)
+Mismatch count will be updated without needing to re-evaluate the entire substring
+5th: Return the result
+ If sliding window has a mismatch count of zero or one the function will return the starting index of that window as the answer
+If the loop completes without finding an “almost equal” substring , it returns -1 to indicate no match was found
+```cpp
 
+class Solution {
+public:
+    int minStartingIndex(string s, string pattern) {
+        int s_len = s.length();
+        int pattern_len = pattern.length();
+
+        // Edge case: if pattern is longer than s, return -1 immediately
+        if (pattern_len > s_len)
+            return 1;
+
+        int mismatch_count = 0;
+
+        // Initialize the mismatch count for the first window
+        for (int j = 0; j < pattern_len; ++j) {
+            if (s[j] != pattern[j]) {
+                mismatch_count++;
+            }
+        }
+
+        // If the first window is "almost equal," return index 0
+        if (mismatch_count <= 1) {
+            return 0;
+        }
+
+        // Slide the window across `s`
+        for (int start = 1; start <= s_len - pattern_len; ++start) {
+            // Outgoing character: remove its effect from mismatch count
+            if (s[start - 1] != pattern[start - 1]) {
+                mismatch_count--;
+            }
+
+            // Incoming character: add its effect to mismatch count
+            if (s[start + pattern_len - 1] != pattern[pattern_len - 1]) {
+                mismatch_count++;
+            }
+
+            // If the current window is "almost equal," return the starting
+            // index
+            if (mismatch_count <= 1) {
+                return start;
+            }
+        }
+
+        // If no "almost equal" substring is found, return -1
+        return 1;
+    }
+};
+
+```
+## Problems with this LeetCode
+The problem I ran into was exceeding the time limit on Leet Code. Mainly because I do not know how to optimize a sliding window algorithm
