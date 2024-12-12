@@ -39,7 +39,6 @@ Mismatch count will be updated without needing to re-evaluate the entire substri
  If sliding window has a mismatch count of zero or one the function will return the starting index of that window as the answer
 If the loop completes without finding an “almost equal” substring , it returns -1 to indicate no match was found
 ```cpp
-
 class Solution {
 public:
     int minStartingIndex(string s, string pattern) {
@@ -87,7 +86,6 @@ public:
         return 1;
     }
 };
-
 ```
 ## Problems with this LeetCode
 The problem I ran into was exceeding the time limit on Leet Code. Mainly because I do not know how to optimize a sliding window algorithm
